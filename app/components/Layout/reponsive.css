@@ -1,0 +1,317 @@
+@media screen and (max-width: 1280px) {
+	.main {
+		display: block;
+	}
+	.sideright {
+	    margin: 16px 16px 0;
+	    width: calc(100% - 32px);
+	    display: flex;
+	    background: transparent;
+	    padding: 0;
+	}
+	.sideright .practice,
+	.sideright .profit,
+	.sideright .results {
+		width: calc(33.333333% - 16px);
+		padding: 16px;
+	}
+	.sideright .practice {
+		background: #16192a;
+		margin-right: 16px;
+	}
+	.sideright .profit {
+		background: #16192a;
+		margin-right: 16px;
+	}
+	.sideright .results {
+		margin-top: 0;
+	}
+	.sideright .practice-amount .number {
+		max-width: 220px;
+		margin: 4px auto 0;
+	}
+	.sideright .profit .btn {
+		padding: 10px 5px;
+	}
+	.content {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 991px) {
+	.main {
+		display: block;
+		padding: 60px 0 0;
+		overflow: hidden;
+	}
+	.header .logo {
+		background: #1f233c;
+	}
+	.header.is-active .logo {
+		background: #16192a;
+	}
+	.sideleft {
+		left: -248px;
+	}
+	.sideleft.is-active {
+		left: 0;
+		box-shadow: 3px 3px 15px rgba(0,0,0,.3);
+	}
+	.sideleft .toggle {
+		display: flex;
+	}
+	.sideright .practice-amount .number a {
+		width: 50px;
+	}
+	.content {
+		width: 100%;
+	}
+	.table table th,
+	.table table td {
+		font-size: 14px;
+	}
+
+	/*-------------------------------------------
+	dashboard
+	---------------------------------------------*/
+	.dashboard-top {
+		display: block;
+	}
+	.dashboard-top .content-left {
+		width: 100%;
+	}
+	.dashboard-top .content-right {
+		width: 100%;
+		margin-top: 16px;
+	}
+	.experience {
+		height: auto;
+	}
+	.table-agency .columns .colum {
+		width: 50%;
+	}
+	.table-agency .columns .colum:last-child {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.chart{
+		padding: 2px !important; 
+	  }
+	.main {
+		padding: 0;
+	}
+	.header {
+		position: relative;
+		padding: 10px 16px;
+		flex-wrap: wrap;
+		height: auto;
+	}
+	.header .logo {		
+		position: unset;
+		width: 100%;
+		height: auto;
+		padding: 0 0 10px;
+		justify-content: center;
+	}
+	.header.is-active .logo {
+		background: #1f233c;
+	}
+	.header .select {
+		margin-left: 0;
+		width: 45%;
+		max-width: 200px;
+	}
+	.header .select select {
+		font-size: 14px;
+	}
+	.header .inner {
+		padding-right: 0;
+		width: 45%;
+		justify-content: flex-end;
+		max-width: 200px;
+	}
+	.header .inner .btn button {
+		width: 90px;
+		font-size: 12px;
+	}
+	.sideleft {
+		padding-top: 110px;
+	}
+	.sideleft .toggle {
+	    top: 115px;
+	}
+	.sideright {
+		display: block;
+	}
+	.sideright .practice,
+	.sideright .profit,
+	.sideright .results {
+		width: 100%;
+		padding: 16px;
+	}
+	.sideright .practice {
+		margin-right: 0;
+	}
+	.sideright .profit {
+		margin-right: 0;
+		margin-top: 20px;
+	}
+	.sideright .results {
+		margin-top: 20px;
+	}
+	.popup .inner {
+		width: 320px;
+		height: auto;
+		padding: 100px 20px 20px;
+		left: calc(50%);
+		top: calc(50%);
+	}
+	.popup .inner:before {
+	    width: 600px;
+	    height: 600px;
+	    bottom: -25px;
+	}
+	.popup .inner:after {
+	    width: 412px;
+	    height: 287px;
+	}
+	.popup .inner .title {
+		font-size: 28px;
+		line-height: 36px;
+	}
+	.popup .inner .number {
+		font-size: 22px;
+		line-height: 32px;
+		margin-top: 20px;
+	}
+	.popup .inner .number span {
+		font-size: 14px;
+	}
+	.popup .inner .btn {
+		margin: 20px auto 0;
+		width: 100%;
+	}
+	.table table th,
+	.table table td {
+		font-size: 13px;
+		line-height: 18px;
+	}
+	.table table td .btn {
+		width: 30px;
+		height: 20px;
+	}
+	.table table td .btn svg {
+		width: 14px;
+		height: 8px;
+	}
+	.content{
+		padding: 0px !important;
+	  }
+	/*-------------------------------------------
+	dashboard
+	---------------------------------------------*/
+	.experience .list-number li {
+		padding: 5px;
+	}
+	.experience .list-number li .box-number .number {
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+	.experience .list-number li .box-number .desc {
+		font-size: 12px;
+	}
+	.table-agency .columns .colum {
+		width: 100%;
+		margin: auto;
+	}
+	.four-icon-wrapper .list-item li {
+		width: 50% !important;
+	}
+	.w-deposit-app {
+		margin: 0 auto;
+    margin-top: 20px;
+	}
+	.popup .inner-agency {
+		width: 100%;
+	}
+	.popup .inner-profile {
+		width: 100%;
+	}
+	.popup .inner-network {
+		width: 100%;
+	}
+	.popup .inner-wallet {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.four-icon-wrapper .list-item li {
+		width: 50%;
+	}
+}
+
+/*-------------------------------------------
+Register + Login
+---------------------------------------------*/
+@media screen and (max-width: 1280px) {
+	.login {
+		padding: 100px 10%;
+	}
+	.login .login-inner {
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 991px) {
+	.login .login-inner {
+		max-width: 540px;
+		padding: 40px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.login {
+		padding: 50px 30px;
+	}
+	.login .login-inner {
+		padding: 30px;
+		max-width: 420px;
+	}
+	.login .login-inner .title {
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.login .login-inner .title-sub {
+		font-size: 14px;
+		line-height: 16px;
+		margin-top: 4px;
+	}
+	.login .login-inner .login-form {
+	  	margin-top: 20px;
+	}
+	.login .login-inner .login-form .row {
+		margin-top: 12px;
+	}
+	.login .login-inner .login-form .row input[type="text"] {
+		font-size: 14px;
+		line-height: 16px;
+	}
+	.login .login-inner .btn {
+		font-size: 14px;
+		line-height: 16px;
+		margin-top: 20px;
+	}
+	.login .login-inner .txt {
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.login .login-inner .txt1 {
+		font-size: 14px;
+		line-height: 16px;
+	}
+	.login .login-inner .img {
+		margin: 24px 0 16px;
+	}
+	.mt-24 {
+	  	margin-top: 12px;
+	}
+}

@@ -1,0 +1,91 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  position: unset;
+  top: unset;
+  left: unset;
+  z-index: unset;
+  background: unset;
+  display: unset;
+  align-items: unset;
+  justify-content: unset;
+  input{
+    background: #282C44;
+    border: 1px solid #282C44;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    /* border: solid 1px #ECECEC; */
+    padding: 10px 15px;
+    line-height: 20px;
+    outline: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    color: #fff;
+  }
+  button{
+    width: 125px;
+    height: 44px;
+    color: #fff;
+    background: #297DFF !important;
+    border-radius: 5px;
+    line-height: 38px;
+    border: none !important;
+
+  }
+  h3{
+    color: #fff;
+  }
+}
+button.ant-modal-close {
+  margin-right: -244px;
+  margin-top: -244px;
+  color: #cccccc;
+}
+
+span.agency-des {
+  text-transform: capitalize;
+}
+.package-actived{
+}
+.package-actived .box-img {
+  float: left;
+}
+.package-actived .title-actived{
+  float: left;
+  display: block;
+  text-align: left;
+  margin-left: 15px;
+}
+.title-actived h1{
+  font-size: 30px;
+}
+.package-actived .box-title{
+  text-align: left;
+}
+.close-modle{
+  right: 15px;
+    top: 10px;
+    float: right;
+    color: #fff;
+    width: 22px;
+    height: 21px;
+    background-color: #888;
+    padding: 0px 4px 0px;
+}
+.close-modle a{
+  color: #fff !important;
+}
+.ant-modal-close-x{
+  display: none;
+}

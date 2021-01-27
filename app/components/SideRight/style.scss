@@ -1,0 +1,27 @@
+.ant-select.ant-select-single.ant-select-show-arrow {
+  width: 100%;
+}
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  background: #282C44;
+  border: none;
+  color: #fff;
+}
+button:disabled,button[disabled]{
+  // opacity: 0.6;
+  cursor:not-allowed !important;
+  background-color: gray !important;
+}
+.ant-message-notice {
+  padding: 8px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.sideRight {
+  .ant-modal-confirm-content{
+    font-size: 24px !important;
+  }
+}
+.none{
+  display: none !important;
+}

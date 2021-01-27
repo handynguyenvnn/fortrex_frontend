@@ -1,0 +1,114 @@
+.drawer-change-account {
+    background-color: #0F111D;
+    font-family: Play;
+    .ant-drawer-content-wrapper {
+        margin-top: 60px;
+        .drawer-change-account-header {
+            display: flex;
+            flex-direction: row;
+            white-space: nowrap;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+            span {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                margin-left: 16px;
+            }
+        }
+        .description {
+            font-family: Play;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.02em;
+            color: #97ADCB;
+            margin: 16px 0;
+        }
+        .btn-submit {
+            display: flex;
+            position: absolute;
+            align-items: center;
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            bottom: 80px;
+            width: calc(100% - 48px);
+            .ant-btn {
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                width: 343px;
+                height: 44px;
+                background: #22D291;
+                border-radius: 6px;
+                max-width: calc(100vw - 48px);
+                margin: auto;
+                span {
+                    display: flex !important;
+                    flex: 1;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+        }
+        .ant-drawer-body {
+            background-color: #0F111D;
+        }
+    }
+    .item-type {
+        width: 100%;
+        height: 70px;
+        background: #282C44;
+        border: 1px solid #282C44;
+        box-sizing: border-box;
+        border-radius: 6px;
+        margin: 8px 0;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: flex-start;
+        &.active {
+            border: 1px solid #767995 !important;
+        }
+        img {
+            width: 51px;
+            height: 51px;
+            align-items: center;
+            margin: auto 16px auto 16px;
+            // padding: 0 16px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            label {
+                font-family: Play;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.02em;
+                color: #767995;
+            }
+            h3 {
+                font-family: Play;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 21px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

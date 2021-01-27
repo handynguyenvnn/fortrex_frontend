@@ -1,0 +1,28 @@
+.ant-pagination.mini .ant-pagination-prev, .ant-pagination.mini .ant-pagination-next{
+  min-width: 24px;
+    height: 24px;
+    margin: 0;
+    line-height: 10px;
+    color: #888 !important;
+}
+.ant-pagination.mini .ant-pagination-prev .ant-pagination-item-link, .ant-pagination.mini .ant-pagination-next .ant-pagination-item-link{
+  color: #888;
+}
+.ant-pagination.mini .ant-pagination-item {
+  min-width: 30px;
+  height: 30px;
+  margin: 2px;
+  line-height: 26px;
+}
+.ant-pagination-item {
+  border: 2px solid #1A1A29;
+  line-height: 30px;
+  background: #1F233C !important;
+  color: #888 !important;
+}
+.ant-pagination-item a{
+  color: #888;
+}
+.ant-pagination-item-active a{
+  color: #fff;
+}

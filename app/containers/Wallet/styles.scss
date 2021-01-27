@@ -1,0 +1,170 @@
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: unset;
+  top: unset;
+  left: unset;
+  z-index: unset;
+  background: unset;
+  display: unset;
+  align-items: unset;
+  justify-content: unset;
+
+  input {
+    background: #282C44;
+    border: 1px solid #282C44;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    /* border: solid 1px #ECECEC; */
+    padding: 10px 15px;
+    line-height: 20px;
+    outline: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    color: #fff;
+  }
+
+  button {
+    width: 125px;
+    height: 44px;
+    color: #fff;
+    background: #297DFF !important;
+    border-radius: 5px;
+    line-height: 38px;
+    border: none !important;
+  }
+
+  h3 {
+    color: #fff;
+  }
+}
+
+.ant-input-search > .ant-input-group > .ant-input-group-addon {
+  border-radius: 0 5px 5px 0 !important;
+  height: 36px !important;
+}
+
+.ant-input-search > .ant-input-group > .ant-input-group-addon .ant-input-search-button {
+  background: #297DFF !important;
+  width: 100px !important;
+  border-radius: 0 5px 5px 0 !important;
+  height: 36px !important;
+  line-height: unset !important;
+}
+
+.ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(25, 134, 218, 0.32) !important;
+}
+
+.ant-input-group .ant-input {
+  background: #282C44 !important;
+  border: 1px solid #282C44 !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  color: white !important;
+  height: 36px !important;
+}
+
+.modal .max-button {
+  height: 38px !important;
+  background: #EB5757 !important;
+  cursor: pointer;
+}
+.img canvas{
+  border: solid 4px #fff;
+  width: 270px;
+}
+.label-tile{
+  text-align: left;
+}
+.ant-modal-body {
+  background: #16192A;
+  color: #fff;
+}
+.text-content{
+  margin-left: 11px;
+}
+.text-content h3{
+  font-size: 21px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.text-content h2{
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+}
+.box-wallets .card-body{
+  border: solid 1px #1F233C;
+  border-radius: 6px;
+}
+.box-wallets .colum-50{
+  height: auto;
+  min-height: 150px;
+  width: calc(100% / 2);
+padding: 10px;
+}
+.box-wallets .colum-30{
+  height: auto;
+  min-height: 150px;
+  width: calc(100% / 3);
+padding: 10px;
+}
+.box-wallets .colum-25{
+  height: auto;
+  min-height: 150px;
+width: calc(100% / 4);
+padding: 10px;
+}
+.ic-wallet{
+  float: left;
+  margin-left: 10px;
+}
+.ic-wallet img{
+  padding: 10px !important;
+}
+.box-wallet-title{
+  float: left;
+  margin-left: 25px;
+  display: grid;
+  text-align: left;
+}
+.w-name{
+color: #fff;
+font-size: 24px;
+margin-bottom: 20px;
+}
+.w-balance{
+  color: #fff;
+  font-size: 24px;
+}
+.box-wallets .card-body{
+  height: 100%;
+}
+.dashboard-top .order{
+  background-color: transparent;
+  padding: 0px;;
+}
+.box-wallets{
+  margin: 5px !important;
+}
+
+table th {
+  white-space: nowrap;
+}
+.title-profile {
+  display: flex;
+  justify-content: space-between;
+}

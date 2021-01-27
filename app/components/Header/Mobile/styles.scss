@@ -1,0 +1,21 @@
+.menu-drawer-mobile {
+  /* customDrawer */
+  .ant-drawer-mask {
+    top: 64px;
+  }
+
+  .ant-drawer-content-wrapper {
+    width: 308px !important;
+    max-width: 80%;
+    top: 64px;
+    overflow: inherit;
+  }
+
+  .ant-drawer-content {
+    overflow: inherit;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+  }
+}

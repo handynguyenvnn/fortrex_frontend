@@ -1,0 +1,24 @@
+@import 'less/vars.less';
+
+.acb-text-area-input-container {
+  width: 100%;
+  .acb-custom-text-area-input {
+    font-size: 16px;
+    max-width: 100%;
+    border: 0;
+    border-bottom: 1px solid #494949;
+    display: flex;
+    flex: 1 1 auto;
+    line-height: 25px;
+    order: 2;
+    text-shadow: none;
+    padding-left: 0;
+    color: @colorInput;
+    &:focus {
+      transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+      border-bottom: 1px solid @colorInput;
+      -webkit-box-shadow: none;
+      outline: 0;
+    }
+  }
+}

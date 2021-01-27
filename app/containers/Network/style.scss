@@ -1,0 +1,48 @@
+.ant-input-search > .ant-input-group > .ant-input-group-addon{
+  border-radius: 0 5px 5px 0;
+}
+.ant-input-search > .ant-input-group > .ant-input-group-addon .ant-input-search-button{
+  background: #297DFF !important;
+  width: 100px !important;
+  border-radius: 0 5px 5px 0;
+  height: 36px !important;
+}
+.ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(25, 134, 218, 0.32) !important;
+}
+.ant-input-group .ant-input {
+  background: #282C44 !important;
+  border: 1px solid #282C44 !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  height: 36px !important;
+  color: white !important;
+}
+.referral-link {
+  h3{
+    color: #fff;
+  }
+}
+.color-white{
+  color: #fff !important;
+}
+.dashboard-full{
+  width: 100% !important;
+}
+.dashboard-bottom table thead th{
+  min-width: 120px !important;
+}
+.four-icon-wrapper .list-item li .box-item .box-text .price {
+  font-size: 32px;
+  float: right;
+}
+.ant-drawer-content{
+  background: transparent !important;
+}
+.ant-drawer-body{
+  padding: 20px 0px !important;
+}
+
+.f-agile-input {
+  width: 270px!important;
+}

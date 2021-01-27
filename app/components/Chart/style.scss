@@ -1,0 +1,16 @@
+body{
+  background-color: #0F111D;
+}
+.main-chart{
+  max-height: 600px !important;
+}
+div#main-chart{
+  background: url(../assets/images/bg-chart.png) no-repeat 50%;
+  background-position: inherit;
+  background-size: cover;
+  background-color: #16192A;
+}
+.button-disable{
+  background: gray !important;
+  cursor: not-allowed !important;
+}

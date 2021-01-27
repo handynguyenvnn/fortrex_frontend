@@ -1,0 +1,155 @@
+.dashboard-mobile {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+    .dashboard-overview-mobile {
+        display: flex;
+        flex-direction: column;   
+        font-family: Play;
+        font-style: normal;
+        font-weight: bold;
+        margin: 0 16px;
+        .trading-experience, .trading-snapshot {
+            h3 {
+            font-size: 18px;
+            line-height: 21px;
+            align-items: center;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            }
+            .expericence {
+                background: #16192A;
+                border: 1px solid #1F233C;
+                box-sizing: border-box;
+                border-radius: 6px;
+                margin-top: 24px;
+                .number {
+                    .ant-row {
+                        .ant-col {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                            justify-content: center;
+                            height: 116px;
+                            &:first-child, &:nth-child(3) {
+                                border-right: 1px dashed #282C44;
+                            }
+                            &:first-child, &:nth-child(2) {
+                                border-bottom: 1px dashed #282C44;
+                            }
+                            h3 {
+                                font-size: 32px;
+                                line-height: 37px;
+                                label {
+                                   font-size: 18px;
+                                }
+                            }
+                            span {
+                                justify-content: flex-end;
+                                font-weight: bold;
+                                font-size: 14px;
+                                line-height: 16px;
+                                text-align: center;
+                                letter-spacing: 0.02em;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .progress {
+                display: flex;
+                justify-content: center;
+                margin: 24px;
+                .render-percent {
+                    div.line {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 16px;
+                    }
+                    h3 {
+                        font-size: 32px;
+                        line-height: 37px;
+                        font-weight: 400;
+                    }
+                    span {
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-align: center;
+                        letter-spacing: 0.02em;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+
+        .trading-snapshot {
+            margin-top: 24px;
+        }
+    }
+
+    .dashboard-trading-history-mobile {
+        font-family: Play;
+        background-color: #16192A;
+        border: 1px solid #1F233C;
+        box-sizing: border-box;
+        .title {
+            display: flex;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            align-items: center;
+            letter-spacing: 0.02em;
+            margin: 24px 16px 16px 16px;
+            .ttl {
+                color: #FFFFFF;
+            }
+        }
+        .trading-history {
+            overflow-x: hidden;
+        }
+        .table-custom {
+            margin: 0 16px;
+            width: 100% !important;
+            .ant-table-thead {
+                background: #1C1F35;
+                border-radius: 6px 6px 0px 0px;
+                height: 50px;
+                // display: flex;
+                white-space: nowrap;
+            }
+            .ant-table-container {
+                background-color: #16192A;
+            }
+            .ant-table-content {
+                width: calc(100vw - 32px);
+                background: #1C1F35;
+            }
+        }
+        .ant-pagination {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            float: unset !important;
+            margin-bottom: 24px;
+            li {
+                width: 30px;
+                height: 30px;
+                margin: 0 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .dashboard-mobile  {
+
+        .trading-history table {
+            width: 100% !important;
+        }
+    }
+}

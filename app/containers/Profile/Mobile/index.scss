@@ -1,0 +1,373 @@
+@media screen and (max-width: 768px) {
+  .profile-form_wrap {
+    padding: 24px 16px;
+    margin: 0 15px;
+    background-color: #16192a;
+    border-radius: 6px;
+  }
+
+  .profile-form_wrap .profile-form_title {
+    font-family: Play-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 24px;
+  }
+
+  .profile-form_wrap .profile-form_input {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 12px 16px;
+    background: #282c44;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #767995;
+  }
+
+  .profile-form_wrap .profile-form_inputpass {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 12px 16px;
+    background: #282c44 !important;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #767995;
+  }
+
+  .profile-form_wrap .profile-form_inputpass input {
+    box-sizing: border-box;
+    background: #282c44 !important;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #767995;
+  }
+
+  .profile-form_wrap .profile-form_inputpass input::placeholder {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #4d5072;
+  }
+
+  .profile-form_wrap .profile-form_input::placeholder {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #4d5072;
+  }
+
+  .profile-form_wrap .profile-form_submit {
+    width: 100%;
+    background: #297dff;
+    border-radius: 6px;
+    height: 44px;
+    font-family: Play-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+  }
+
+  .customFormItem {
+    margin-bottom: 0;
+  }
+
+  /* security */
+  .security_wrap {
+    padding: 24px 16px;
+    margin: 0 15px;
+    background-color: #16192a;
+    border-radius: 6px;
+  }
+
+  .security .security-item {
+    border-bottom: 1px solid #282c44;
+    margin-bottom: 24px;
+  }
+
+  .security .security-item:last-child {
+    border: none;
+    margin-bottom: 0;
+  }
+
+  .security .security_title {
+    font-family: Play-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-left: 0 !important;
+  }
+
+  .security .security_subtitle {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    text-align: justify;
+    margin-left: 0!important;
+    margin-bottom: 8px;
+  }
+
+  .security .security_smallquote {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: start;
+    color: #767995;
+    margin-bottom: 16px;
+  }
+
+  .security .security_email {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 24px;
+  }
+
+  .security .security_changepass {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #297dff;
+    margin-bottom: 24px;
+    text-align: justify;
+    cursor: pointer;
+  }
+
+  .security .security-authenticator_wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .security .security-authenticator_wrap .security-gauth_control {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+  }
+
+  .security .security-authenticator_wrap .security-gauth_enable {
+    color: #297dff;
+  }
+
+  .security .security-authenticator_wrap .security-gauth_disable {
+    color: #ff3b3b;
+  }
+
+  /* change pass modal */
+  .changepass-success_wrap {
+    background: #16192a;
+    border: 1px solid #1f233c;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 32px 16px 24px;
+  }
+
+  .changepass-success_wrap .changepass-success_svg {
+    margin-bottom: 20px;
+  }
+  .changepass-success_wrap .changepass-success_svg img {
+    padding: 0!important;
+    border-radius: 0!important;
+    background: none!important;
+  }
+
+  .changepass-success_wrap .changepass-success_title {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+
+    color: #f9f9f9;
+  }
+  .changepass-success_wrap .changepass-success_subtitle {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+
+  .changepass-success_wrap .changepass-success_btn {
+    background: #22d291;
+    border-radius: 6px;
+    height: 44px;
+    border: none;
+    font-family: Play-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #ffffff;
+    width: 100%;
+  }
+
+  /* tfa */
+  .tfa-form_wrap {
+    padding: 24px 16px;
+    margin: 0 15px;
+    background-color: #16192a;
+    border-radius: 6px;
+    margin-bottom: 16px;
+  }
+
+  .tfa-form_wrap .tfa-form_title {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .tfa-form_wrap .tfa-form_subtitle {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #767995;
+    margin-bottom: 16px;
+  }
+
+  .tfa-form_wrap .tfa-form-btn_group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .tfa-form_wrap .tfa-form-btn_group img {
+    padding: 0!important;
+    border-radius: 0!important;
+    background: none!important;
+  }
+
+  .tfa-form_wrap .tfa-form-qr {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 21px;
+  }
+
+  .tfa-form_wrap .tfa-form-qr img {
+    padding: 0!important;
+    border-radius: 0!important;
+    background: none!important;
+  }
+
+  .tfa-form_wrap .tfa-security-key .tfa-key_title {
+    font-family: Play-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #8e90a6;
+  }
+
+  .tfa-form_wrap .tfa-security-key .tfa-key_subtitle {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: #ffc329;
+    margin-bottom: 16px;
+  }
+
+  .tfa-form_wrap .tfa-form_input {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 12px 16px;
+    background: #282c44;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #767995;
+  }
+
+  .tfa-form_wrap .tfa-form_input::placeholder {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #4d5072;
+  }
+  .ant-pagination-total-text {
+    display: none;
+    color: #888;
+  }
+}

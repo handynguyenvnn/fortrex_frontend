@@ -1,0 +1,30 @@
+/*------------------------------------------------------------
+	Clearfix
+------------------------------------------------------------*/
+@mixin clear {
+	*zoom: 1;
+	&:after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+/*------------------------------------------------------------
+	Media
+------------------------------------------------------------*/
+@mixin max($point) {
+    @media screen and (max-width: $point) {
+        @content;
+    }
+}
+@mixin min($point) {
+    @media screen and (min-width: $point) {
+        @content;
+    }
+}
+@mixin sp {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}

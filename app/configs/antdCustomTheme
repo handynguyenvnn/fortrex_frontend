@@ -1,0 +1,17 @@
+module.exports = {
+  'primary-color': '#EE5B33',
+  'font-size-base': '13px',
+  'border-radius-sm': '4px',
+  'shadow-color': 'rgba(0, 0, 0, 0.14)',
+  'shadow-1-up': '0 -1px 4px rgba(0, 0, 0, 0.14)',
+  'shadow-1-down': '0 1px 4px 0 rgba(0, 0, 0, 0.14)',
+  'shadow-1-left': '-1 0 4px 0 rgba(0, 0, 0, 0.14)',
+  'shadow-1-right': '1 0 4px 0 rgba(0, 0, 0, 0.14)',
+
+  // Card
+  'card-head-padding': '10px',
+  'card-padding-base': '20px',
+
+  // Menu
+  'menu-collapsed-width': '60px',
+};

@@ -1,0 +1,126 @@
+import React, { useState,useEffect  } from 'react';
+//import {PAGE_PATHS} from "constants";
+import {PAGE_PATHS} from 'constants/constant';
+import queryString from 'query-string';
+import { useLocation } from 'react-router-dom';
+import {resetPassword} from "services";
+import {openNotificationWithIcon} from "utils/utils";
+import {history} from "utils";
+
+const ResetPassword = () => {
+  let location = useLocation()
+  const [loading, setLoading] = useState(false);
+  const [password, setPassword] = useState('');
+  const [confirmPass, setConfirmPass] = useState('');
+  const [token, setToken] = useState('');
+  const handleOnChange = (fieldName, item) => {
+    switch (fieldName) {
+      case 'pass':
+        setPassword(item.target.value);
+        break;
+      case 'confirmPass':
+        setConfirmPass(item.target.value);
+        break;
+
+    }
+  }
+  const login = ()=>{
+    history.push(PAGE_PATHS.LOGIN);
+  }
+  const handleResetPassword = () => {
+    try {
+      setLoading(true);
+      const params = {
+        PassNew:password,
+        PassNewRe:confirmPass,
+        Token:token
+      };
+      resetPassword({ params })
+        .then(res => {
+          if (res && res.data.StatusCode === 401) {
+            openNotificationWithIcon('error', 'Notify', res.data.Meg);
+            return;
+          }
+          if (res && res.data.StatusCode === 200) {
+            history.push(PAGE_PATHS.RESET_PASSWORD_SUCCESS);
+          }
+          if (res && res.data.StatusCode === 400) {
+            openNotificationWithIcon('error', 'Notify', res.data.Meg);
+          }
+        })
+        .catch()
+        .finally(() => {
+          setLoading(false);
+        });
+    } catch (errorInfo) {
+    }
+  }
+  const [, setTypeInput] = useState('password');
+  const [isShowPass, setIsShowPass] = useState(false);
+  const [isShowConfirmPass, setIsShowConfirmPass] = useState(false);
+  const handleOnChangeShowPassword = () => {
+    setIsShowPass(!isShowPass);
+  }
+  useEffect( () => {
+    if(isShowPass){
+      setTypeInput(isShowPass ? 'text' : 'password');
+      setTypeInput(isShowConfirmPass ? 'text' : 'password');
+    }
+  }, [isShowPass, isShowConfirmPass])
+
+  useEffect( () => {
+    const requesttoken =  queryString.parse(location.search).token;
+    setToken(requesttoken || '');
+  }, []);
+
+
+  return (
+    <div>
+      <div className="login">
+        <div className="login-inner">
+          <h3 className="title">RESET PASSWORD</h3>
+          <p className="title-sub">Enter your new password</p>
+          <div className="login-form">
+            <form>
+              <div className="row">
+
+                <input className="pdr32" type={isShowPass ? 'text' : 'password'} value={password} onChange={(item) => handleOnChange('pass', item)}
+                   name="pass" placeholder="New password"/>
+                 <span className="icon" onClick={ () => handleOnChangeShowPassword()}>
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M1.42716 6C1.50002 6.12591 1.59662 6.28637 1.71628 6.47165C2.02362 6.94754 2.47878 7.5804 3.06969 8.21071C4.26368 9.48429 5.933 10.6667 8 10.6667C10.067 10.6667 11.7363 9.48429 12.9303 8.21071C13.5212 7.5804 13.9764 6.94754 14.2837 6.47165C14.4034 6.28637 14.5 6.12591 14.5728 6C14.5 5.87409 14.4034 5.71363 14.2837 5.52835C13.9764 5.05246 13.5212 4.4196 12.9303 3.78929C11.7363 2.51571 10.067 1.33333 8 1.33333C5.933 1.33333 4.26368 2.51571 3.06969 3.78929C2.47878 4.4196 2.02362 5.05246 1.71628 5.52835C1.59662 5.71363 1.50002 5.87409 1.42716 6ZM15.3333 6C15.9296 5.70186 15.9295 5.70163 15.9294 5.70139L15.9283 5.69925L15.926 5.69469L15.9184 5.67988C15.9121 5.66752 15.9031 5.65021 15.8915 5.62829C15.8683 5.58447 15.8347 5.52215 15.7907 5.44399C15.7028 5.28776 15.5734 5.06768 15.4038 4.80498C15.0653 4.28088 14.5621 3.5804 13.903 2.87737C12.597 1.48429 10.5997 0 8 0C5.40033 0 3.40299 1.48429 2.09698 2.87737C1.43789 3.5804 0.93471 4.28088 0.596224 4.80498C0.426567 5.06768 0.297195 5.28776 0.209314 5.44399C0.165349 5.52215 0.131693 5.58447 0.108502 5.62829C0.0969045 5.65021 0.0879168 5.66752 0.0815586 5.67988L0.0739933 5.69469L0.0716926 5.69925L0.0709134 5.7008C0.0707909 5.70104 0.0703819 5.70186 0.666667 6L0.0703819 5.70186C-0.0234606 5.88954 -0.0234606 6.11046 0.0703819 6.29814L0.666667 6C0.0703819 6.29814 0.0702594 6.2979 0.0703819 6.29814L0.0716926 6.30075L0.0739933 6.30531L0.0815586 6.32012C0.0879168 6.33248 0.0969045 6.34979 0.108502 6.37171C0.131693 6.41553 0.165349 6.47785 0.209314 6.55601C0.297195 6.71224 0.426567 6.93232 0.596224 7.19502C0.93471 7.71913 1.43789 8.4196 2.09698 9.12263C3.40299 10.5157 5.40033 12 8 12C10.5997 12 12.597 10.5157 13.903 9.12263C14.5621 8.4196 15.0653 7.71913 15.4038 7.19502C15.5734 6.93232 15.7028 6.71224 15.7907 6.55601C15.8347 6.47785 15.8683 6.41553 15.8915 6.37171C15.9031 6.34979 15.9121 6.33248 15.9184 6.32012L15.926 6.30531L15.9283 6.30075L15.9291 6.2992C15.9292 6.29896 15.9296 6.29814 15.3333 6ZM15.3333 6L15.9296 6.29814C16.0235 6.11046 16.0232 5.88907 15.9294 5.70139L15.3333 6Z"
+                                      fill="#767995"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M7.99992 4.66659C7.26354 4.66659 6.66659 5.26354 6.66659 5.99992C6.66659 6.7363 7.26354 7.33325 7.99992 7.33325C8.7363 7.33325 9.33325 6.7363 9.33325 5.99992C9.33325 5.26354 8.7363 4.66659 7.99992 4.66659ZM5.33325 5.99992C5.33325 4.52716 6.52716 3.33325 7.99992 3.33325C9.47268 3.33325 10.6666 4.52716 10.6666 5.99992C10.6666 7.47268 9.47268 8.66659 7.99992 8.66659C6.52716 8.66659 5.33325 7.47268 5.33325 5.99992Z"
+                                      fill="#767995"/>
+                            </svg>
+                        </span>
+              </div>
+              <div className="row">
+                <input className="pdr32" type={isShowConfirmPass ? 'text' : 'password'} value={confirmPass}
+                   onChange={(item) => handleOnChange('confirmPass', item)} name="repass"
+                   placeholder="Confirm new password"/>
+                 <span className="icon" onClick={ () => handleOnChangeShowConfirmPassword()}>
+                            <svg width="16" height="12" viewBox="0 0 16 12" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M1.42716 6C1.50002 6.12591 1.59662 6.28637 1.71628 6.47165C2.02362 6.94754 2.47878 7.5804 3.06969 8.21071C4.26368 9.48429 5.933 10.6667 8 10.6667C10.067 10.6667 11.7363 9.48429 12.9303 8.21071C13.5212 7.5804 13.9764 6.94754 14.2837 6.47165C14.4034 6.28637 14.5 6.12591 14.5728 6C14.5 5.87409 14.4034 5.71363 14.2837 5.52835C13.9764 5.05246 13.5212 4.4196 12.9303 3.78929C11.7363 2.51571 10.067 1.33333 8 1.33333C5.933 1.33333 4.26368 2.51571 3.06969 3.78929C2.47878 4.4196 2.02362 5.05246 1.71628 5.52835C1.59662 5.71363 1.50002 5.87409 1.42716 6ZM15.3333 6C15.9296 5.70186 15.9295 5.70163 15.9294 5.70139L15.9283 5.69925L15.926 5.69469L15.9184 5.67988C15.9121 5.66752 15.9031 5.65021 15.8915 5.62829C15.8683 5.58447 15.8347 5.52215 15.7907 5.44399C15.7028 5.28776 15.5734 5.06768 15.4038 4.80498C15.0653 4.28088 14.5621 3.5804 13.903 2.87737C12.597 1.48429 10.5997 0 8 0C5.40033 0 3.40299 1.48429 2.09698 2.87737C1.43789 3.5804 0.93471 4.28088 0.596224 4.80498C0.426567 5.06768 0.297195 5.28776 0.209314 5.44399C0.165349 5.52215 0.131693 5.58447 0.108502 5.62829C0.0969045 5.65021 0.0879168 5.66752 0.0815586 5.67988L0.0739933 5.69469L0.0716926 5.69925L0.0709134 5.7008C0.0707909 5.70104 0.0703819 5.70186 0.666667 6L0.0703819 5.70186C-0.0234606 5.88954 -0.0234606 6.11046 0.0703819 6.29814L0.666667 6C0.0703819 6.29814 0.0702594 6.2979 0.0703819 6.29814L0.0716926 6.30075L0.0739933 6.30531L0.0815586 6.32012C0.0879168 6.33248 0.0969045 6.34979 0.108502 6.37171C0.131693 6.41553 0.165349 6.47785 0.209314 6.55601C0.297195 6.71224 0.426567 6.93232 0.596224 7.19502C0.93471 7.71913 1.43789 8.4196 2.09698 9.12263C3.40299 10.5157 5.40033 12 8 12C10.5997 12 12.597 10.5157 13.903 9.12263C14.5621 8.4196 15.0653 7.71913 15.4038 7.19502C15.5734 6.93232 15.7028 6.71224 15.7907 6.55601C15.8347 6.47785 15.8683 6.41553 15.8915 6.37171C15.9031 6.34979 15.9121 6.33248 15.9184 6.32012L15.926 6.30531L15.9283 6.30075L15.9291 6.2992C15.9292 6.29896 15.9296 6.29814 15.3333 6ZM15.3333 6L15.9296 6.29814C16.0235 6.11046 16.0232 5.88907 15.9294 5.70139L15.3333 6Z"
+                                      fill="#767995"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M7.99992 4.66659C7.26354 4.66659 6.66659 5.26354 6.66659 5.99992C6.66659 6.7363 7.26354 7.33325 7.99992 7.33325C8.7363 7.33325 9.33325 6.7363 9.33325 5.99992C9.33325 5.26354 8.7363 4.66659 7.99992 4.66659ZM5.33325 5.99992C5.33325 4.52716 6.52716 3.33325 7.99992 3.33325C9.47268 3.33325 10.6666 4.52716 10.6666 5.99992C10.6666 7.47268 9.47268 8.66659 7.99992 8.66659C6.52716 8.66659 5.33325 7.47268 5.33325 5.99992Z"
+                                      fill="#767995"/>
+                            </svg>
+                        </span>
+              </div>
+               <input className="btn success"  className={`btn success ${loading ? 'disabled' : ''}`} disabled={loading}  onClick={ () => handleResetPassword()} type="submit" name="submit" value="SUBMIT" />
+                <p className="txt txt-center mt-24">Back to <a onClick={() => login()}>Log in</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default ResetPassword;

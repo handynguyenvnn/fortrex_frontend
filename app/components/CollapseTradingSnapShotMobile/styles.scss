@@ -1,0 +1,53 @@
+.collapse-order-mobile {
+    font-family: Play;
+    margin: 16px 0;
+    .ant-collapse {
+        background: #1C1F35;
+        border-radius: 6px 6px 0px 0px;
+    }
+    .collapse-order-mobile-header {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        img {
+            margin: 0 6px 0 0;
+            height: 24px;
+        }
+        h3 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+        }
+    }
+
+    .ant-collapse-content {
+        table {
+            width: 100%;
+            td {
+                height: 50px;
+                padding: 0 16px;
+                &:first-child {
+                    font-family: Play;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.02em;
+                    color: #86889A;
+                }
+                &:nth-child(2){
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-align: right;
+                    letter-spacing: 0.02em;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}

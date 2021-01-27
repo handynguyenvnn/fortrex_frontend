@@ -1,0 +1,107 @@
+.mobile-transaction .mobile-transaction_icon {
+  display: none;
+}
+
+.transition-history_select {
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-transaction table {
+    word-break: initial;
+  }
+  .mobile-transaction .ant-table {
+    background: none!important;
+  }
+  
+  .mobile-transaction .mobile-transaction_icon {
+    display: block;
+  }
+  .transaction-form_wrap {
+    padding: 0 16px;
+  }
+  .transaction-form_wrap .transition-history_select {
+    height: 44px;
+  }
+  .transaction-form_wrap .transition-history_select .ant-select-selector {
+    height: 44px !important;
+    background: #282c44;
+    border-radius: 6px;
+  }
+  .transaction-form_wrap
+    .transition-history_select
+    .ant-select-selector
+    .ant-select-selection-placeholder {
+    line-height: 44px !important;
+  }
+  .transaction-form_wrap
+    .transition-history_select
+    .transition-history_select-span {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    letter-spacing: 0.02em;
+
+    color: #767995;
+  }
+  .transaction-form_wrap .ant-form-item-label > label {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    color: #ffffff;
+  }
+  .transaction-form_wrap .transition-history_dp {
+    width: 100%;
+    height: 44px;
+    background: #282c44;
+    border-radius: 6px;
+    border: none;
+  }
+  .transaction-form_wrap .transition-history_dp .ant-picker-suffix {
+    color: #ffffff;
+  }
+  .transaction-form_wrap .transition-history_dp .ant-picker-input input {
+    color: #ffffff;
+  }
+  .transaction-form_wrap
+    .transition-history_dp
+    .ant-picker-input
+    input::placeholder {
+    font-family: Play-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #4d5072;
+  }
+  .ant-picker-dropdown table tr td {
+    background-color: #ffffff;
+  }
+  .transition-submit_btn {
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    width: calc(100% - 32px);
+    height: 44px;
+    background: #297dff;
+    border-radius: 6px;
+    font-family: Play-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    outline: none;
+    border: none;
+  }
+}

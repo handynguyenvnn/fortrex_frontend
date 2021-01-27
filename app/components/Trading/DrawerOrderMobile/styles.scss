@@ -1,0 +1,39 @@
+.drawer-order-mobile {
+    background-color: #0F111D;
+    font-family: Play;
+    .ant-drawer-content-wrapper {
+        margin-top: 60px;
+        .drawer-order-mobile-header {
+            display: flex;
+            flex-direction: row;
+            white-space: nowrap;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+            span {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                margin-left: 16px;
+                &.trade-history {
+                    position: absolute;
+                    right: 16px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-align: right;
+                    letter-spacing: 0.02em;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+        .ant-drawer-body {
+            background-color: #0F111D;
+        }
+    }
+}

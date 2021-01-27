@@ -1,0 +1,37 @@
+@import 'less/vars.less';
+
+.acb-text-input-container {
+  width: 100%;
+  .acb-custom-text-input {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1rem;
+    max-width: 100%;
+    border: 0;
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    flex: 1 1 auto;
+    line-height: 25px;
+    order: 2;
+    text-shadow: none;
+    input {
+      font-size: 1rem;
+    }
+    &:hover {
+      border-bottom: 1px solid #494949;
+      transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+      -webkit-box-shadow: none;
+      outline: 0;
+    }
+    &:focus,
+    &:focus-within {
+      transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+      border-bottom: 1px solid @colorInput;
+      -webkit-box-shadow: none;
+      outline: 0;
+    }
+    .ant-input-suffix {
+      color: black;
+    }
+  }
+}
